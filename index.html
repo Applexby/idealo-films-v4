@@ -58,6 +58,77 @@
   <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
 </section>
 
+<!-- DEMO REEL -->
+<section class="section" id="demo-reel" style="padding-top:0;padding-bottom:0;margin-top:-1px">
+  <div class="demo-reel-full">
+    <div class="demo-reel-content">
+      <div class="demo-reel-label">
+        <span class="section-label">Demo Reel 2026</span>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">NUESTRO TRABAJO<br/><span style="color:var(--accent)">EN ACCIÓN</span></h2>
+      </div>
+      <div class="demo-player-wrap" id="demoPlayer">
+        <!-- Poster/thumbnail overlay -->
+        <div class="demo-poster" id="demoPoster" onclick="reproducirDemo()">
+          <img src="https://res.cloudinary.com/dnprz5iie/image/upload/v1774021448/PORTADA_DEMO_REEL_nypboz.jpg" alt="Demo Reel Idealo Films"/>
+          <div class="demo-poster-overlay">
+            <div class="demo-poster-glow"></div>
+            <button class="demo-big-play" aria-label="Reproducir Demo Reel">
+              <div class="demo-play-ring"></div>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+            <div class="demo-poster-info">
+              <span class="demo-poster-title">IDEALO FILMS — Demo Reel 2026</span>
+              <span class="demo-poster-dur">0:30</span>
+            </div>
+          </div>
+        </div>
+        <!-- Video element (hidden until play) -->
+        <video
+          id="demoVideo"
+          src="https://res.cloudinary.com/dnprz5iie/video/upload/v1774021201/VIDEO_DEMO_REEL_v1_giy7kg.mp4"
+          poster="https://res.cloudinary.com/dnprz5iie/image/upload/v1774021448/PORTADA_DEMO_REEL_nypboz.jpg"
+          preload="metadata"
+          playsinline
+          style="display:none;width:100%">
+        </video>
+        <!-- Custom controls -->
+        <div class="demo-controls" id="demoControls" style="display:none">
+          <div class="demo-progress-wrap" id="demoProgressWrap">
+            <div class="demo-progress-bar" id="demoProgressBar">
+              <div class="demo-progress-fill" id="demoProgressFill"></div>
+              <div class="demo-progress-thumb" id="demoProgressThumb"></div>
+            </div>
+          </div>
+          <div class="demo-ctrl-row">
+            <div class="demo-ctrl-left">
+              <button class="demo-ctrl-btn" id="demoPlayPause" onclick="toggleDemo()" title="Play/Pause">
+                <svg id="iconPlay" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg id="iconPause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="demo-volume-wrap">
+                <button class="demo-ctrl-btn" onclick="toggleMute()" id="demoMuteBtn" title="Silenciar">
+                  <svg id="iconVol" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                  <svg id="iconMute" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" stroke-width="2"/><line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <input type="range" class="demo-volume-slider" id="demoVolume" min="0" max="1" step="0.05" value="1"/>
+              </div>
+              <span class="demo-time" id="demoTime">0:00 / 0:30</span>
+            </div>
+            <div class="demo-ctrl-right">
+              <button class="demo-ctrl-btn" onclick="reiniciarDemo()" title="Reiniciar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+              </button>
+              <button class="demo-ctrl-btn" onclick="pantallaCompleta()" title="Pantalla completa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INTRO -->
 <section class="intro section">
   <div class="container">
